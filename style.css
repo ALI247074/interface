@@ -215,78 +215,38 @@ body{
 }
 
 /* ===== Responsive (media queries) - Desktop-first to mobile ===== */
-@media (max-width: 1000px){
-  .about-grid{ grid-template-columns: repeat(2,1fr); }
-  .projects-grid{ grid-template-columns: repeat(2,1fr); }
-  .hero-wrap .brand{ font-size:40px; }
-}
-
-/* Mobile adjustments */
 @media (max-width: 680px){
   /* Header adjustments */
   .site-header{
-    padding: 12px 18px; /* أقل padding لتناسب الشاشات الصغيرة */
+    padding: 12px 16px;
+    text-align: center; /* كل شيء في الوسط */
   }
-  .nav{
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-  }
+
+  /* Logo and Designer text */
   .logo-wrap{
-    flex-direction: column;
+    flex-direction: column; /* كلمة GENESIS فوق، النص تحتها */
     align-items: center;
     gap: 4px;
   }
   .logo{
-    font-size: 28px;
+    font-size: 28px; /* تصغير كلمة GENESIS */
     letter-spacing: 2px;
-    text-align: center;
   }
   .designer{
-    font-size: 0.75rem;
-    text-align: center;
-    margin-top: 0;
+    font-size: 0.7rem;
+    margin: 0;
   }
-  .nav-actions{
-    flex-direction: column;
-    gap: 6px;
-    width: 100%;
-    align-items: center;
+
+  /* Navigation buttons below logo */
+  .nav{
+    flex-direction: row; /* تبقى أفقية */
+    justify-content: center;
+    margin-top: 8px;
+    gap: 8px;
   }
   .nav-btn{
-    width: 90%;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 14px;
+    padding: 6px 10px;
+    font-size: 13px;
   }
-
-  /* Hero adjustments */
-  .hero-wrap .brand{
-    font-size:32px;
-  }
-  .tagline{
-    font-size:1rem;
-  }
-  .cta-row{
-    flex-direction: column;
-    gap:10px;
-  }
-
-  /* Sections adjustments */
-  .section{ padding:70px 16px; }
-  .about-grid{ grid-template-columns:1fr; }
-  .projects-grid{ grid-template-columns:1fr; }
-
-  /* Dynamic Island adjustments */
-  .island-pill{ padding:8px 14px; font-size:.9rem; }
-
-  /* Social grid adjustments */
-  .social-item{
-    width:100%;
-    justify-content:space-between;
-  }
-
-  /* Hide floating blur on mobile */
-  .float-a,.float-b,.float-c{ display:none; }
 }
 
