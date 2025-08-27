@@ -256,7 +256,7 @@ body{
 .highlight-bg5::before {
     content: '';
     position: absolute;
-    top: -930px;
+    top: -945px;
     left: -100px;
     right: -20px;
     bottom: -10px;
@@ -328,7 +328,6 @@ body{
 .site-header{
     padding: 12px 16px;
     text-align: center; /* كل شيء في الوسط */
-    
   }
 
   /* Logo and Designer text */
@@ -357,15 +356,4 @@ body{
     padding: 6px 10px;
     font-size: 13px;
   }
-
-  #island { position:fixed; top:60px; left:50%; transform:translateX(-50%); z-index:1400; pointer-events:none; }
-.island-pill{
-  display:inline-block; padding:8px 20px; border-radius:20px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
-  border:1px solid rgba(255,255,255,0.08);
-  backdrop-filter: blur(10px) saturate(120%);
-  color:#fff; font-weight:600; font-size:0.95rem;
-  opacity:0; transform:scale(.95); transition:all .28s ease;
-}
-.island-pill.show{ opacity:1; transform:scale(1); pointer-events:auto; }
 }
