@@ -112,7 +112,7 @@ body{
 /* ABOUT grid */
 .about-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; align-items:start; }
 .glass-card{ background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)); border:1px solid rgba(255,255,255,0.04);
-  padding:20px; border-radius:12px; backdrop-filter: blur(8px); }
+  padding:20px; border-radius:12px; backdrop-filter: blur(12px); }
 
 /* PROJECTS grid */
 .projects-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; }
@@ -187,7 +187,7 @@ body{
     left: -20px;
     right: -20px;
     bottom: -10px;
-    background: linear-gradient(135deg, rgba(65, 255, 211, 0.4), rgba(45, 227, 255, 0.442), rgba(3, 159, 40, 0.565));  
+    background: linear-gradient(135deg, rgba(65, 255, 71, 0.873), rgba(45, 227, 255, 0.36), rgba(55, 223, 249, 0.757),rgba(65, 166, 255, 0.873));   
     border-radius: 16px;   
     filter: blur(20px);
     z-index: -1;
@@ -195,13 +195,108 @@ body{
 }
 
 
+.highlight-bg3 {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.highlight-bg3::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -20px;
+    right: -20px;
+    bottom: -10px;
+    width: 250px;
+    height: 150px;
+    background: linear-gradient(135deg, rgba(65, 255, 71, 0.873), rgba(45, 227, 255, 0.36), rgba(55, 223, 249, 0.757),rgba(65, 166, 255, 0.873));   
+    border-radius: 16px;   
+    filter: blur(20px);
+    z-index: -1;
+    animation: auroraAnim 2s ease-in-out infinite alternate;
+}
 
 
+.highlight-bg4 {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.highlight-bg4::before {
+    content: '';
+    position: absolute;
+    top: -00px;
+    left: -5px;
+    right: -20px;
+    bottom: -10px;
+    width: 350px;
+    height: 90px;
+    background: linear-gradient(135deg, rgba(65, 255, 71, 0.873), rgba(45, 227, 255, 0.36), rgba(55, 223, 249, 0.757),rgba(65, 166, 255, 0.873));   
+    border-radius: 16px;   
+    filter: blur(20px);
+    z-index: -1;
+    animation: auroraAnim 2s ease-in-out infinite alternate;
+}
 
 
+.highlight-bg5 {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.highlight-bg5::before {
+    content: '';
+    position: absolute;
+    top: -930px;
+    left: -100px;
+    right: -20px;
+    bottom: -10px;
+    width: 650px;
+    height: 100px;
+    max-height: 100vh;
+    background: linear-gradient(135deg, rgba(65, 255, 71, 0.873), rgba(45, 227, 255, 0.36), rgba(55, 223, 249, 0.757),rgba(65, 166, 255, 0.873));   
+    border-radius: 16px;   
+    filter: blur(20px);
+    z-index: -1;
+    animation: auroraAnim 2s ease-in-out infinite alternate;
+}
 
 
+.floating-effectV {
+    position: absolute; /* أو fixed */
+    top: 10;
+    left: 0;
+    width: 40%; 
+    height: 140px; /* حسب المنطقة */
+    background: linear-gradient(135deg, rgba(224, 255, 123, 0.608), rgba(255, 96, 213, 0.71), rgba(84, 255, 178, 0.71));
+    border-radius: 20px;
+    filter: blur(25px);
+    z-index: -1; /* ليكون خلف العناصر */
+    animation: auroraAnim 2.0s ease-in-out infinite alternate;
+}
 
+
+.floating-effectV {
+    position: absolute; /* أو fixed */
+    top: 10;
+    left: 0;
+    width: 40%; 
+    height: 140px; /* حسب المنطقة */
+    background: linear-gradient(135deg, rgba(224, 255, 123, 0.608), rgba(255, 96, 213, 0.71), rgba(84, 255, 178, 0.71));
+    border-radius: 20px;
+    filter: blur(25px);
+    z-index: -1; /* ليكون خلف العناصر */
+    animation: auroraAnim 2.0s ease-in-out infinite alternate;
+}
 
 
 
@@ -214,7 +309,8 @@ body{
     100% { transform: translateX(-10px) translateY(5px) scale(1); opacity: 0.7; }
 }
 
-/* ===== Responsive (media queries) - Desktop-first to mobile ===== */
+
+
 @media (max-width: 680px){
   /* header compact */
   .nav-actions{ display:flex; gap:8px; }
@@ -232,6 +328,7 @@ body{
 .site-header{
     padding: 12px 16px;
     text-align: center; /* كل شيء في الوسط */
+    
   }
 
   /* Logo and Designer text */
@@ -241,7 +338,7 @@ body{
     gap: 4px;
   }
   .logo{
-    font-size: 28px; /* تصغير كلمة GENESIS */
+    font-size: 23px; /* تصغير كلمة GENESIS */
     letter-spacing: 2px;
   }
   .designer{
@@ -260,6 +357,15 @@ body{
     padding: 6px 10px;
     font-size: 13px;
   }
+
+  #island { position:fixed; top:60px; left:50%; transform:translateX(-50%); z-index:1400; pointer-events:none; }
+.island-pill{
+  display:inline-block; padding:8px 20px; border-radius:20px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  border:1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px) saturate(120%);
+  color:#fff; font-weight:600; font-size:0.95rem;
+  opacity:0; transform:scale(.95); transition:all .28s ease;
 }
-
-
+.island-pill.show{ opacity:1; transform:scale(1); pointer-events:auto; }
+}
