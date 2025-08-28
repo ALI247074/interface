@@ -112,7 +112,7 @@ body{
 /* ABOUT grid */
 .about-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; align-items:start; }
 .glass-card{ background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)); border:1px solid rgba(255,255,255,0.04);
-  padding:20px; border-radius:12px; backdrop-filter: blur(8px); }
+  padding:20px; border-radius:12px; backdrop-filter: blur(18px); }
 
 /* PROJECTS grid */
 .projects-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; }
@@ -165,7 +165,7 @@ body{
     left: -20px;
     right: -20px;
     bottom: -10px;
-    background: linear-gradient(135deg, rgba(65, 255, 211, 0.4), rgba(45, 227, 255, 0.442), rgba(3, 159, 40, 0.565));  
+    background: linear-gradient(135deg, #00ffa3, #008cff, #c471ed);  
     border-radius: 16px;   
     filter: blur(20px);
     z-index: -1;
@@ -191,46 +191,176 @@ body{
     border-radius: 16px;   
     filter: blur(20px);
     z-index: -1;
-    animation: auroraAnim 2s ease-in-out infinite alternate;
+    
+}
+
+
+.highlight-bg3 {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.highlight-bg3::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -60px;
+    right: -20px;
+    bottom: -10px;
+    height: 10px;
+    width: 350px;
+    background: linear-gradient(135deg, #ff6a00, #ff0099, #6600ff);    
+    border-radius: 16px;    
+    filter: blur(15px);
+    z-index: -1; 
+    
+}
+
+.highlight-bg4 {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.highlight-bg4::before {
+    content: '';
+    position: absolute;
+    top: 27px;
+    left: -60px;
+    right: -20px;
+    bottom: -10px;
+    height: 10px;
+    width: 350px;
+    background: linear-gradient(135deg, #ff6a00, #ff0099, #6600ff);    
+    border-radius: 16px;    
+    filter: blur(15px);
+    z-index: -1; 
+    
+}
+
+.highlight-bg5 {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.highlight-bg5::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -150px;
+    right: -20px;
+    bottom: -10px;
+    height: 10px;
+    width: 350px;
+    background: linear-gradient(135deg, #ff6a00, #ff0099, #6600ff);   
+    border-radius: 16px;    
+    filter: blur(15px);
+    z-index: -1; 
+     
+}
+
+
+
+.highlight-bg6 {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.highlight-bg6::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -150px;
+    right: -20px;
+    bottom: -10px;
+    height: 15px;
+    width: 450px;
+    background: linear-gradient(135deg, #ff6a00, #ff0099, #6600ff);   
+    border-radius: 16px;    
+    filter: blur(15px);
+    z-index: -1; 
+     
+}
+
+.highlight-bg7 {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.highlight-bg7::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -60px;
+    right: -20px;
+    bottom: -10px;
+    height: 30px;
+    width: 350px;
+    background: linear-gradient(135deg, #ff6a00, #ff0099, #6600ff);    
+    border-radius: 16px;    
+    filter: blur(15px);
+    z-index: -1; 
+     
+}
+
+ /* ===== Hero Glass Card under Power in Every Pixel ===== */
+
+.highlight-bg8 {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.highlight-bg8::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -150px;
+    right: -20px;
+    bottom: -10px;
+    height: 10px;
+    width: 450px;
+    background: linear-gradient(135deg, #ffea00, #ffb700, #ff3700dd);     
+    border-radius: 16px;      
+    filter: blur(15px);
+    z-index: -1; 
+     
 }
 
 
 
 
-
-
-
-.floating-effectV {
-    position: absolute; /* أو fixed */
-    top: 10;
-    left: 0;
-    width: 40%; 
-    height: 140px; /* حسب المنطقة */
-    background: linear-gradient(135deg, rgba(224, 255, 123, 0.608), rgba(255, 96, 213, 0.71), rgba(84, 255, 178, 0.71));
-    border-radius: 20px;
-    filter: blur(25px);
-    z-index: -1; /* ليكون خلف العناصر */
-    animation: auroraAnim 2.0s ease-in-out infinite alternate;
+.hero-glass-card .hero-card-img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 12px;
 }
 
-
-.floating-effectV {
-    position: absolute; /* أو fixed */
-    top: 10;
-    left: 0;
-    width: 40%; 
-    height: 140px; /* حسب المنطقة */
-    background: linear-gradient(135deg, rgba(224, 255, 123, 0.608), rgba(255, 96, 213, 0.71), rgba(84, 255, 178, 0.71));
-    border-radius: 20px;
-    filter: blur(25px);
-    z-index: -1; /* ليكون خلف العناصر */
-    animation: auroraAnim 2.0s ease-in-out infinite alternate;
+.hero-glass-card .hero-card-text {
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: bold;
+  font-family:Verdana, Geneva, Tahoma, sans-serif; 
 }
-
-
-
-
-
 
 @keyframes auroraAnim {
     0% { transform: translateX(0) translateY(0) scale(1); opacity: 0.7; }
@@ -238,6 +368,42 @@ body{
     100% { transform: translateX(-10px) translateY(5px) scale(1); opacity: 0.7; }
 }
 
+
+#floatingX {
+  position: absolute;
+  top:0; left:0;
+  width: 100%;  height: 100%;
+  pointer-events: none; /* لا تمنع التفاعل مع الكارد */
+  overflow: hidden;
+  z-index: 0;
+}
+
+#floatingX span {
+  position: absolute;
+  color: rgba(255,255,255,0.2);
+  font-size: 16px;
+  animation: floatX 5s linear infinite;
+}
+
+#floatingX span:nth-child(1){ left: 10%; animation-duration: 4s; top: 20%; }
+#floatingX span:nth-child(2){ left: 50%; animation-duration: 6s; top: 40%; }
+#floatingX span:nth-child(3){ left: 80%; animation-duration: 5s; top: 10%; }
+#floatingX span:nth-child(4){ left: 30%; animation-duration: 7s; top: 60%; }
+#floatingX span:nth-child(5){ left: 60%; animation-duration: 4.5s; top: 30%; }
+#floatingX span:nth-child(6){ left: 20%; animation-duration: 6.5s; top: 50%; }
+#floatingX span:nth-child(7){ left: 60%; animation-duration: 6.5s; top: 70%; }
+#floatingX span:nth-child(8){ left: 50%; animation-duration: 6.5s; top: 80%; }
+#floatingX span:nth-child(9){ left: 60%; animation-duration: 6.5s; top: 100%; }
+#floatingX span:nth-child(10){ left: 65%; animation-duration: 6.5s; top: 120%; }
+#floatingX span:nth-child(11){ left: 88%; animation-duration: 6.5s; top: 50%; }
+
+@keyframes floatX {
+  0% { transform: translateY(0) translateX(0) rotate(0deg);}
+  25% { transform: translateY(-20px) translateX(10px) rotate(15deg);}
+  50% { transform: translateY(-40px) translateX(-10px) rotate(-10deg);}
+  75% { transform: translateY(-20px) translateX(10px) rotate(20deg);}
+  100% { transform: translateY(0) translateX(0) rotate(10deg);}
+}
 
 
 @media (max-width: 680px){
@@ -285,4 +451,10 @@ body{
     padding: 6px 10px;
     font-size: 13px;
   }
+ .project-card:hover{ transform: translateY(-8px); box-shadow: 0 20px 50px rgba(0,0,0,0.6); }
+
+ html {
+  scroll-behavior: smooth;
+}
+  
 }
