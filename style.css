@@ -407,51 +407,57 @@ body{
 
 
 @media (max-width: 680px){
-  .site-header {
-    display: flex;
-    flex-direction: row; /* كل شيء على صف واحد */
-    align-items: center;
-    justify-content: space-between; /* الشمال للوجو، اليمين للأزرار */
+  /* header compact */
+  .nav-actions{ display:flex; gap:6px; }
+  .about-grid{ grid-template-columns:1fr; }
+  .projects-grid{ grid-template-columns:1fr; }
+  .section{ padding:70px 18px; }
+  .hero-wrap .brand{ font-size:32px; }
+  .island-pill{ padding:8px 14px; font-size:.9rem; }
+  .social-item{ min-width:unset; width:100%; justify-content:space-between; }
+  .float-a,.float-b,.float-c{ display:none; } /* hide heavy blur on mobile for clarity */
+  .site-header{ position:fixed; top:0; left:10; right:0; z-index:1200;
+  background: linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.15));
+  backdrop-filter: blur(8px); padding:18px 36px;
+}
+.site-header{
     padding: 12px 16px;
-    width: 100%;
-    box-sizing: border-box; /* مهم لتجنب overflow */
-    overflow: hidden; /* يمنع ظهور السكّـرول الأفقي */
-  }
-
-  .logo-wrap {
+    text-align: center; /* كل شيء في الوسط */
     flex-direction: row;
-    align-items: center;
     gap: 4px;
   }
 
-  .logo {
-    font-size: 23px;
+  /* Logo and Designer text */
+  .logo-wrap{
+    flex-direction: column; /* كلمة GENESIS فوق، النص تحتها */
+    align-items: center;
+    gap: 4px;
+  }
+  .logo{
+    font-size: 23px; /* تصغير كلمة GENESIS */
     letter-spacing: 2px;
   }
-
-  .designer {
+  .designer{
     font-size: 0.7rem;
     margin: 0;
   }
 
-  .nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end; /* الأزرار على اليمين */
-    gap: 6px;
-    max-width: calc(100% - 120px); /* يترك مساحة للوجو */
+  /* Navigation buttons below logo */
+  .nav{
+    flex-direction: row; /* تبقى أفقية */
+    justify-content: center;
+    margin-top: 8px;
+    margin-left: 3px;
+    gap: 3px;
   }
-
-  .nav-btn {
+  .nav-btn{
     padding: 6px 10px;
     font-size: 13px;
-    white-space: nowrap; /* يمنع الأزرار من النزول للسطر */
   }
+ .project-card:hover{ transform: translateY(-8px); box-shadow: 0 20px 50px rgba(0,0,0,0.6); }
 
-  html {
-    overflow-x: hidden; /* يمنع السكّـرول الأفقي نهائياً */
-  }
+ html {
+  scroll-behavior: smooth;
 }
+  
 }
-
