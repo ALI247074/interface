@@ -406,17 +406,18 @@ body{
 }
 
 
-@media (max-width: 680px){
+@media (max-width: 680px) {
 
-  /* ===== Floating X icons - تظهر فقط فوق hero section ===== */
+  /* ===== Floating X icons - فقط أعلى hero ===== */
   #floatingX {
-    position: absolute;  /* مو fixed، بس داخل الـ hero */
+    position: absolute; /* مو fixed */
     top: 0;
     left: 0;
     width: 100%;
-    height: 200px; /* يغطي فقط القسم الأول */
+    height: 120px; /* يغطي فقط الجزء العلوي */
     overflow: hidden;
-    pointer-events: none; /* لا تمنع التفاعل */
+    pointer-events: none;
+    z-index: 500; /* فوق المحتوى مباشرة */
   }
   #floatingX span {
     font-size: 14px;
@@ -439,14 +440,14 @@ body{
   /* ===== Header / Nav ===== */
   .site-header{
     position: fixed;
-    top:0;
-    left:0;
-    right:0;
-    z-index:1200;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1200;
     background: linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.15));
     backdrop-filter: blur(8px);
 
-    padding: 8px 12px;   /* أقل ارتفاع */
+    padding: 10px 24px; /* أقل ارتفاع */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -454,8 +455,8 @@ body{
 
   /* Logo + Designer */
   .logo-wrap{
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* كلمة GENESIS فوق، النص تحتها */
+    align-items: flex-start; /* GENESIS على اليسار */
     gap: 2px;
   }
   .logo{
@@ -470,12 +471,12 @@ body{
   /* Navigation buttons */
   .nav{
     flex-direction: row;
-    justify-content: center;
     gap: 6px;
+    justify-content: flex-end;
     flex-wrap: wrap;
   }
   .nav-btn{
-    padding: 5px 8px;
+    padding: 5px 10px;
     font-size: 12px;
   }
 
@@ -499,16 +500,14 @@ body{
     justify-content:space-between;
   }
 
-  /* hide heavy blur on mobile for clarity */
+  /* hide heavy blur on mobile */
   .float-a,.float-b,.float-c{
     display:none;
   }
 
-  /* smooth scroll */
   html {
     scroll-behavior: smooth;
   }
-
 }
 
 
