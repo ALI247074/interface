@@ -433,9 +433,6 @@ body{
     width:100%;
     justify-content:space-between;
   }
-  .float-a,.float-b,.float-c{
-    display:none; /* hide heavy blur on mobile for clarity */
-  }
 
   .site-header{
     position:fixed;
@@ -487,6 +484,7 @@ body{
     overflow-x: hidden; /* 🔥 يمنع السكرول الأفقي */
   }
 }
+
 
 
 
