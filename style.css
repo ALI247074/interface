@@ -371,17 +371,20 @@ body{
 
 #floatingX {
   position: absolute;
-  top:0; left:0;
-  width: 100%;  height: 100%;
-  pointer-events: none; /* لا تمنع التفاعل مع الكارد */
-  overflow: hidden;
-  z-index: 0;
+  top: 20px; /* أو حسب المكان اللي بدك */
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto; 
+  height: auto;
+  pointer-events: none;
+  z-index: 50; /* فوق البطاقات */
+  overflow: visible;
 }
 
 #floatingX span {
   position: absolute;
   color: rgba(255,255,255,0.2);
-  font-size: 16px;
+  font-size:16px;
   animation: floatX 5s linear infinite;
 }
 
@@ -407,103 +410,34 @@ body{
 
 
 @media (max-width: 680px){
-  /* header compact */
-  .nav-actions {
-    display:flex;
-    gap:8px;
-  }
-
-  .about-grid {
-    grid-template-columns:1fr;
-  }
-
-  .projects-grid {
-    grid-template-columns:1fr;
-  }
-
-  .section {
-    padding:70px 18px;
-  }
-
-  .hero-wrap .brand {
-    font-size:32px;
-  }
-
-  .island-pill {
-    padding:8px 14px;
-    font-size:.9rem;
-  }
-
-  .social-item {
-    min-width:unset;
-    width:100%;
-    justify-content:space-between;
-  }
-
-  .float-a, .float-b, .float-c {
-    display:none; /* hide heavy blur on mobile */
-  }
-
-  /* Site header adjustments */
   .site-header {
-    position:fixed;
-    top:0;
-    left:0;
-    right:0;
-    z-index:1200;
-    background: linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.15));
-    backdrop-filter: blur(8px);
-    padding:12px 16px;
-  }
-
-  /* Logo and designer aligned left */
-  .logo-wrap {
-    flex-direction: row; /* كلمة GENESIS + designer بجانب بعض */
-    align-items: center;
-    gap: 8px;
-    justify-content: flex-start;
-  }
-
-  .logo {
-    font-size:23px;
-    letter-spacing:2px;
-  }
-
-  .designer {
-    font-size:0.7rem;
-    margin:0;
-  }
-
-  /* Navigation buttons stay horizontal, next to logo */
-  .nav {
+    padding: 12px 16px;
+    display: flex;
     flex-direction: row;
-    display:flex;
-    align-items:center;
-    justify-content:flex-start; /* يظلوا على اليسار */
-    gap:8px;
-    max-width:100%; /* منع overflow */
-    margin:0;
+    align-items: center;
+    justify-content: space-between; /* logo + nav-actions على نفس الصف */
+  }
+
+  .logo-wrap {
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .nav-actions {
+    display: flex;
+    gap: 6px;
   }
 
   .nav-btn {
-    padding:6px 10px;
-    font-size:13px;
+    padding: 6px 10px;
+    font-size: 13px;
   }
 
-  .project-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
-  /* Prevent horizontal scroll */
   body {
-    overflow-x:hidden;
+    overflow-x: hidden;
   }
 }
-}
+
 
 
