@@ -56,3 +56,34 @@ document.querySelectorAll('.nav-btn').forEach(a=>{
   a.addEventListener('focus', ()=> showIsland(a.textContent.trim()));
   a.addEventListener('mouseenter', ()=> showIsland(a.textContent.trim()));
 });
+
+
+
+
+
+
+
+
+// المودال
+const payBtn = document.getElementById('payBtn');
+const glassCard = document.getElementById('glassCard');
+const overlay = document.getElementById('overlay');
+const closeBtn = document.getElementById('closeGlassCard');
+
+payBtn.addEventListener('click', function(e){
+    e.preventDefault();
+    overlay.style.display = 'block';
+    glassCard.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+});
+
+closeBtn.addEventListener('click', function(){
+    overlay.style.display = 'none';
+    glassCard.style.display = 'none';
+    document.body.style.overflow = '';
+});
+
+
+
+
+
