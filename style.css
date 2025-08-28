@@ -443,9 +443,13 @@ body{
   /* Navigation buttons below logo */
   .nav{
     flex-direction: row; /* تبقى أفقية */
-    justify-content: center;
     margin-top: 8px;
     gap: 8px;
+    display:flex;
+     align-items:center;
+      justify-content:space-between;
+       max-width:1200px;
+        margin:0 auto;
   }
   .nav-btn{
     padding: 6px 10px;
@@ -458,3 +462,4 @@ body{
 }
   
 }
+
