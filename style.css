@@ -346,7 +346,7 @@ body{
 
 
 
-.hero-glass-card1 .hero-card1-img {
+.hero-glass-card .hero-card-img {
   width: 100%;
   max-height: 400px;
   margin-left: 10px;
@@ -355,7 +355,7 @@ body{
   margin-bottom: 12px; 
 }
 
-.hero-glass-card1 .hero-card1-text {
+.hero-glass-card .hero-card-text {
   color: #fff;
   font-size: 1.2rem;
   text-align: center;
@@ -465,14 +465,15 @@ body{
   
 }
 
- .hero-card1 {
+ .hero-card {
     width: 95%;          /* خلي الكرت يعبّي تقريبا عرض الشاشة */
     margin: 0 auto;      /* وسّط الكرت */
-    padding: 16px;   
+    padding: 16px;
+    margin-top: 50px;   
     z-index: 1000;    /* مسافة داخلية مريحة */
   }
 
-   .hero-card1-content {
+  .glass-card-content {
     display: flex;
     flex-direction: column;  /* صورة فوق والنص تحت */
     align-items: center;
@@ -480,15 +481,16 @@ body{
     gap: 12px;
   }
 
-   .hero-card1-img { 
+  .hero-card-img { 
     max-width: none;  
-    width: 100%;    /* ما يطلع برّا الشاشة */        /* حافظ على الأبعاد */
+    width: 100%;    /* ما يطلع برّا الشاشة */
+    height: 100%;        /* حافظ على الأبعاد */
     margin-left: -50px;
-     margin-top: 100px;
+    
      z-index: 1000;  
   }
 
-    .hero-card1-text { 
+  .hero-card-text { 
     font-size: 1.2rem;   /* تصغير النص شوي على الموبايل */
     line-height: 1.2;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
@@ -500,8 +502,6 @@ body{
 
     scroll-behavior: smooth;
   }
-
-
 
 
 
