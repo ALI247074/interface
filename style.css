@@ -374,8 +374,8 @@ body{
   top:0; left:0;
   width: 100%;  height: 100%;
   pointer-events: none; /* لا تمنع التفاعل مع الكارد */
-  overflow: hidden;
-  z-index: 0;
+  overflow:scroll; 
+  z-index: -3;
 }
 
 #floatingX span {
@@ -416,6 +416,10 @@ body{
   .island-pill { padding:8px 14px; font-size:.9rem; }
   .social-item { min-width:unset; width:100%; justify-content:space-between; }
   .float-a,.float-b,.float-c { display:none; } /* hide heavy blur on mobile for clarity */
+  
+  
+
+
 
   .site-header {
     position: fixed;
@@ -454,8 +458,36 @@ body{
   .project-card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(0,0,0,0.6); }
 
   html { scroll-behavior: smooth; overflow-x: hidden; } /* يمنع السكروول الأفقي نهائياً */
+
+  
 }
 
+.hero-glass-card {
+    width: 95%;          /* خلي الكرت يعبّي تقريبا عرض الشاشة */
+    margin: 0 auto;      /* وسّط الكرت */
+    padding: 16px;       /* مسافة داخلية مريحة */
+  }
+
+  .glass-card-content {
+    display: flex;
+    flex-direction: column;  /* صورة فوق والنص تحت */
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .hero-card-img {
+    max-width: 150%;     /* ما يطلع برّا الشاشة */
+    height: auto;        /* حافظ على الأبعاد */
+    object-fit: contain; /* ما يخلي الصورة تتمدد غلط */
+  }
+
+  .hero-card-text {
+    font-size: 1.2rem;   /* تصغير النص شوي على الموبايل */
+    line-height: 1.4;
+    margin-top: -10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
 
 
 
