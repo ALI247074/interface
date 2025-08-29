@@ -407,7 +407,10 @@ body{
   100% { transform: translateY(0) translateX(0) rotate(10deg);}
 }
 
+ html{
 
+    scroll-behavior: smooth;
+  }
 
 @media (max-width: 680px){
   /* header compact */
@@ -502,6 +505,7 @@ body{
 
     scroll-behavior: smooth;
   }
+
 
 
 
