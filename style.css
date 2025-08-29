@@ -346,15 +346,16 @@ body{
 
 
 
-.hero-glass-card .hero-card-img {
+.hero-glass-card1 .hero-card1-img {
   width: 100%;
   max-height: 400px;
+  margin-left: 10px;
   object-fit: cover;
   border-radius: 16px;
-  margin-bottom: 12px;
+  margin-bottom: 12px; 
 }
 
-.hero-glass-card .hero-card-text {
+.hero-glass-card1 .hero-card1-text {
   color: #fff;
   font-size: 1.2rem;
   text-align: center;
@@ -367,6 +368,7 @@ body{
     50% { transform: translateX(10px) translateY(-5px) scale(1.05); opacity: 0.8; }
     100% { transform: translateX(-10px) translateY(5px) scale(1); opacity: 0.7; }
 }
+
 
 
 #floatingX {
@@ -404,6 +406,7 @@ body{
   75% { transform: translateY(-20px) translateX(10px) rotate(20deg);}
   100% { transform: translateY(0) translateX(0) rotate(10deg);}
 }
+
 
 
 @media (max-width: 680px){
@@ -462,13 +465,14 @@ body{
   
 }
 
-.hero-glass-card {
+ .hero-card1 {
     width: 95%;          /* خلي الكرت يعبّي تقريبا عرض الشاشة */
     margin: 0 auto;      /* وسّط الكرت */
-    padding: 16px;       /* مسافة داخلية مريحة */
+    padding: 16px;   
+    z-index: 1000;    /* مسافة داخلية مريحة */
   }
 
-  .glass-card-content {
+   .hero-card1-content {
     display: flex;
     flex-direction: column;  /* صورة فوق والنص تحت */
     align-items: center;
@@ -476,19 +480,27 @@ body{
     gap: 12px;
   }
 
-  .hero-card-img {
-    max-width: 150%;     /* ما يطلع برّا الشاشة */
+   .hero-card1-img { 
+    max-width: none;  
+    width: 10%;    /* ما يطلع برّا الشاشة */
     height: auto;        /* حافظ على الأبعاد */
-    object-fit: contain; /* ما يخلي الصورة تتمدد غلط */
+    margin-left: 0px;
+    
+     z-index: 1000;  
   }
 
-  .hero-card-text {
+    .hero-card1-text { 
     font-size: 1.2rem;   /* تصغير النص شوي على الموبايل */
-    line-height: 1.4;
-    margin-top: -10px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.2;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
+    margin-left: -12px;
+    
   }
+  
+  html{
 
+    scroll-behavior: smooth;
+  }
 
 
 
