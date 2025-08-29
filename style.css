@@ -482,8 +482,8 @@ body{
 
    .hero-card1-img { 
     max-width: none;  
-    width: 10%;    /* ما يطلع برّا الشاشة */
-    height: auto;        /* حافظ على الأبعاد */
+    width: 100%;    /* ما يطلع برّا الشاشة */
+    height: 100%;        /* حافظ على الأبعاد */
     margin-left: 0px;
     
      z-index: 1000;  
@@ -501,6 +501,7 @@ body{
 
     scroll-behavior: smooth;
   }
+
 
 
 
