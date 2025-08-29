@@ -497,7 +497,7 @@ body{
     font-size: 1.2rem;   /* تصغير النص شوي على الموبايل */
     line-height: 1.2;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
-    margin-left: -9px;
+    margin-left: 0px;
     
   }
   
@@ -505,6 +505,7 @@ body{
 
     scroll-behavior: smooth;
   }
+
 
 
 
