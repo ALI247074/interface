@@ -18,7 +18,7 @@ body{
 
 /* Scrollbar شفاف تمامًا */
 ::-webkit-scrollbar {
-  width: 6px; /* حجم رفيع جدًا */
+  width: 0px; /* حجم رفيع جدًا */
 }
 
 ::-webkit-scrollbar-track {
@@ -505,6 +505,7 @@ body{
 
     scroll-behavior: smooth;
   }
+
 
 
 
